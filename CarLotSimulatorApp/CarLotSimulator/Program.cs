@@ -1,33 +1,28 @@
-﻿using System;
+﻿using CarLotSimulator;
+using Microsoft.VisualBasic;
+using System;
+using System.Collections.Generic;
+//TODO
 
-namespace CarLotSimulator
+//Create a seperate class file called Car-  DONE
+//Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable-DONE
+//Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()-DONE
+//The methods should take one string parameter: the respective noise property-DONE
+
+var carOne = new Car(2021, "Ford", "Mustang", "vrooom", "bippity beep", true);
+
+var carTwo = new Car(2000, "Chevy", "Impala", "spitter spatter", "wonk", true);
+
+var carThree = new Car(2022, "GMC", "Yukon", "hmmmmm", "beep", true);
+
+//Now that the Car class is created we can instanciate 3 new cars
+//Set the properties for each of the cars
+//Call each of the methods for each car
+carOne.MakeEngineNoise(carOne.EngineNoise);
+carTwo.MakeEngineNoise(carTwo.EngineNoise);
+carThree.MakeEngineNoise(carThree.EngineNoise);
+
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            //TODO
-
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property
-
-
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
-
-            //*************BONUS*************//
-
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
-
-            //*************BONUS X 2*************//
-
-            //Create a CarLot class
-            //It should have at least one property: a List of cars
-            //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
-            //At the end iterate through the list printing each of car's Year, Make, and Model to the console
-        }
-    }
+    Console.WriteLine($"{carOne.Year} {carOne.Make} {carOne.Model} {carOne.EngineNoise} {carOne.HonkNoise}");
 }
+
